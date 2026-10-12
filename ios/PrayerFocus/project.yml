@@ -54,6 +54,7 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: Take a photo to register your prayer mat or compare it on this iPhone for an optional unlock.
         SalahSidePrivacyPolicyURL: $(SALAH_SIDE_PRIVACY_POLICY_URL)
         CFBundleURLTypes:
           - CFBundleURLName: com.marsolab.PrayerFocus.affirmations
@@ -203,6 +204,7 @@ targets:
     platform: iOS
     sources:
       - PrayerFocusTests
+      - TestSupport
       - path: Configuration/PrayerFocus.storekit
         buildPhase: resources
       - path: Configuration/PrayerFocusWidgetsTesting.storekit
@@ -213,6 +215,18 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.marsolab.PrayerFocusTests
+        GENERATE_INFOPLIST_FILE: YES
+
+  PrayerFocusVisionTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - TestSupport
+      - PrayerFocusApp/Services/MatImageMatcher.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.marsolab.PrayerFocusVisionTests
         GENERATE_INFOPLIST_FILE: YES
 
   PrayerFocusUITests:
@@ -234,6 +248,14 @@ targets:
         TARGETED_DEVICE_FAMILY: 1
 
 schemes:
+  PrayerFocusVision:
+    build:
+      targets:
+        PrayerFocusVisionTests: [test]
+    test:
+      targets:
+        - PrayerFocusVisionTests
+
   PrayerFocus:
     run:
       storeKitConfiguration: Configuration/PrayerFocus.storekit

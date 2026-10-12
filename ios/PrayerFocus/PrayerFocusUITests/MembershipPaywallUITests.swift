@@ -79,6 +79,26 @@ final class MembershipPaywallUITests: XCTestCase {
     }
 
     @MainActor
+    func testMatRegistrationIsOptionalAndUnavailableCameraCanBeCancelled() {
+        let app = launchSetup()
+        let register = app.buttons["mat.register"]
+        for _ in 0..<5 where !register.isHittable { app.swipeUp() }
+        XCTAssertTrue(register.waitForExistence(timeout: 5))
+        register.tap()
+        XCTAssertTrue(app.buttons["mat.takePhoto"].waitForExistence(timeout: 5))
+        XCTAssertFalse(app.buttons["mat.confirmPhoto"].exists)
+        app.buttons["mat.takePhoto"].tap()
+        XCTAssertTrue(app.staticTexts["mat.message"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["mat.message"].label.contains("camera is unavailable"))
+        app.buttons["Cancel"].tap()
+        XCTAssertTrue(register.waitForExistence(timeout: 5))
+        XCTAssertFalse(app.switches["mat.enabled"].exists)
+        for _ in 0..<5 where !app.buttons["setup.city"].isHittable { app.swipeDown() }
+        completeSetup(app)
+        XCTAssertTrue(app.buttons["membership.subscribe"].exists)
+    }
+
+    @MainActor
     func testTrialDisclosureFollowsPlanSelection() {
         let app = launchSetup()
         completeSetup(app)

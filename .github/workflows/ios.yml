@@ -30,11 +30,16 @@ jobs:
       - name: Install project generator
         run: brew install xcodegen
       - name: Check native formatting
-        run: xcrun swift-format lint --strict --recursive --configuration .swift-format PrayerFocusApp Shared PrayerFocusWidgets PrayerFocusMonitor PrayerFocusShield PrayerFocusShieldAction PrayerFocusTests PrayerFocusUITests
+        run: xcrun swift-format lint --strict --recursive --configuration .swift-format PrayerFocusApp Shared PrayerFocusWidgets PrayerFocusMonitor PrayerFocusShield PrayerFocusShieldAction PrayerFocusTests PrayerFocusUITests TestSupport
       - name: Validate calculation reference fixtures
         run: swift test --package-path Vendor/Adhan
       - name: Generate Xcode project
         run: xcodegen generate
+      - name: Validate native Vision image comparison
+        run: >-
+          xcodebuild -project PrayerFocus.xcodeproj -scheme PrayerFocusVision
+          -destination 'platform=macOS,arch=arm64'
+          CODE_SIGNING_ALLOWED=NO test
       - name: Select installed iPhone simulator
         id: simulator
         run: echo "id=$(python3 scripts/select_simulator.py)" >> "$GITHUB_OUTPUT"

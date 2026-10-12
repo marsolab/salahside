@@ -41,6 +41,24 @@ export const prerender = true;
     focus pause, and opaque Apple Screen Time selection tokens. Prayer history is limited to 90
     event records. Check-ins are voluntary and self-reported; the app does not verify worship.
   </p>
+  <h2>Optional prayer mat unlock</h2>
+  <p>
+    If you register your own prayer mat, SalahSide uses the camera to take fresh photos and compares
+    them on your iPhone. The app saves only a comparison fingerprint, a registration identifier, and
+    the enabled setting in protected app-private storage. It does not save the captured photographs,
+    add them to your photo library, or upload photographs or fingerprints. Captures stay in memory
+    during review and processing and are discarded when you leave the capture flow.
+  </p>
+  <p>
+    The fingerprint is not shared with widgets or Screen Time extensions. You can disable, replace,
+    or remove the registered mat in Settings. Photo unlock is optional and does not verify prayer or
+    establish that a photo contains a physical mat. Manual unlock remains available. Camera
+    permission is requested only when you choose to take a photo.
+  </p>
+  <p>
+    The mat profile is marked as excluded from backups. This is guidance to iOS, not a guarantee
+    that it can never appear in a backup or restored device.
+  </p>
   <h2>On-device extensions</h2>
   <p>
     Apple Screen Time extensions use a shared on-device App Group containing the minimum
@@ -62,10 +80,11 @@ export const prerender = true;
   </p>
   <h2>Optional permissions</h2>
   <p>
-    Screen Time access and notifications are optional. Without Screen Time permission, prayer times
-    and check-ins remain available with active membership. You can adjust focus switches, unlock a
-    prayer, pause focus, and change permissions in iOS Settings. Notifications require permission
-    and may be affected by your device's notification and Focus settings.
+    Screen Time access, notifications, and camera permission are optional. Without Screen Time
+    permission, prayer times and check-ins remain available with active membership. You can adjust
+    focus switches, unlock a prayer, pause focus, and change permissions in iOS Settings.
+    Notifications require permission and may be affected by your device's notification and Focus
+    settings.
   </p>
   <h2>Storage, backup, and deletion</h2>
   <p>
@@ -74,9 +93,9 @@ export const prerender = true;
   </p>
   <p>
     In SalahSide, open Settings and choose Erase local data to remove prayer settings, app
-    selection, and check-in history and clear app-owned focus restrictions. This does not cancel an
-    Apple subscription or remove existing device backups. Manage subscriptions and backups through
-    Apple's settings.
+    selection, check-in history, and your registered mat and clear app-owned focus restrictions.
+    This does not cancel an Apple subscription or remove existing device backups. Manage
+    subscriptions and backups through Apple's settings.
   </p>
   <h2>This website and support email</h2>
   <p>

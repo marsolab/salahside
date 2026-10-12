@@ -86,6 +86,15 @@ final class PrayerFocusSession {
         savePhase()
     }
 
+    @discardableResult
+    func unlockForMatchedMat(eventID: String) -> Bool {
+        guard currentEventID == eventID, isPrayerTime, !hasScheduleError,
+            phase != .checkedIn, !releasedEventIDs.contains(eventID)
+        else { return false }
+        unlockWithoutCheckIn()
+        return true
+    }
+
     func reset(for prayer: Prayer) {
         currentPrayer = prayer
         phase = .ready
