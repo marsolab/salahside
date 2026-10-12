@@ -10,6 +10,10 @@ Status: **not run**. Record device, iOS, signed version/build, tester, timestamp
 | Enabled prayer | Selected targets shield when the event is delivered, app foreground/background/killed | Pending |
 | Finish / Already prayed | Shield clears and exactly one local completion is stored | Pending |
 | Unlock | Shield clears without a completion; repeated callbacks do not reapply it | Pending |
+| Mat registration / privacy | Optional, initially off; camera requested on capture only; register/replace/remove/relaunch; no raw photo persisted or uploaded | Pending |
+| Mat comparison | Same mat vs different mat across patterned/plain mats, light, framing, rotation and iPhone models; record distances and acceptance/rejection before calibrating the 0.35 threshold | Pending |
+| Mat release / cancellation | Matching capture clears only the current shield without completion; mismatch, cancellation, changed event/registration and expired membership never photo-unlock | Pending |
+| Camera denied / unavailable | Clear recovery and ordinary manual unlock; no Photos-library permission | Pending |
 | Pause / Resume | Immediate clear, manual/timed resume, including reopening under 15 minutes before expiry; no false completion | Pending |
 | Disabled next prayer | Previous restriction clears; next restriction does not start | Pending |
 | Membership expiry | Foreground and closed-app expiry clear restrictions; no purchase required to escape | Pending |
@@ -21,7 +25,7 @@ Status: **not run**. Record device, iOS, signed version/build, tester, timestamp
 | Offline reminders | Next seven days scheduled; opening refreshes the horizon | Pending |
 | Widget families | Install all three, longest text, expiry, tint, deep link and restoration | Pending |
 | Accessibility | VoiceOver, largest Dynamic Type, contrast and reduced motion | Pending |
-| Erase local data | Immediate clear, setup shown again, local history/token removal; subscription persists | Pending |
+| Erase local data | Immediate clear, setup shown again, local history/token/mat removal; deletion failure is surfaced; subscription persists | Pending |
 
 Apple's Device Activity callbacks follow device activity and are not a precise wall-clock alarm. Verify observed behavior before making timing claims. Schedule registration failures must leave app-owned restrictions cleared.
 

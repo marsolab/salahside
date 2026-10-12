@@ -5,12 +5,17 @@ struct FocusSettingsView: View {
     @Bindable var session: PrayerFocusSession
     @Environment(ScreenTimeService.self) private var screenTime
     @Environment(FocusConfiguration.self) private var configuration
+    @Environment(RegisteredMatStore.self) private var matStore
     @Environment(\.dismiss) private var dismiss
     var isSetup = false
     var allowsPrayerActions = true
 
     @State private var isPickerPresented = false
     @State private var isConfirmingErase = false
+    @State private var eraseError: String?
+    @State private var matCapture: MatCapturePurpose?
+    @State private var isConfirmingMatRemoval = false
+    @State private var matError: String?
 
     var body: some View {
         @Bindable var screenTime = screenTime
@@ -121,6 +126,11 @@ struct FocusSettingsView: View {
                     )
                 }
 
+                if isSetup || allowsPrayerActions {
+                    MatSettingsSection(
+                        capture: $matCapture, isConfirmingRemoval: $isConfirmingMatRemoval, errorMessage: $matError)
+                }
+
                 Section("Focus for prayers") {
                     ForEach(Prayer.allCases) { prayer in
                         Toggle(
@@ -172,6 +182,12 @@ struct FocusSettingsView: View {
             }
             .confirmationDialog("Erase local data?", isPresented: $isConfirmingErase, titleVisibility: .visible) {
                 Button("Erase settings and check-ins", role: .destructive) {
+                    do {
+                        try matStore.remove()
+                    } catch {
+                        eraseError = "Your registered mat could not be removed. Please try erasing again."
+                        return
+                    }
                     FocusRuntime().erase()
                     session.eraseLocalHistory()
                     session.focusEnabled = Dictionary(uniqueKeysWithValues: Prayer.allCases.map { ($0, true) })
@@ -183,8 +199,16 @@ struct FocusSettingsView: View {
                 Button("Cancel", role: .cancel) {}
             } message: {
                 Text(
-                    "This deletes local prayer settings, app selections and check-ins, and unlocks selected apps. Your Apple subscription remains active. Existing device backups are not erased."
+                    "This deletes local prayer settings, app selections, check-ins and your registered mat, and unlocks selected apps. Your Apple subscription remains active. Existing device backups are not erased."
                 )
+            }
+            .alert(
+                "Local data was not erased",
+                isPresented: Binding(get: { eraseError != nil }, set: { if !$0 { eraseError = nil } })
+            ) {
+                Button("OK") { eraseError = nil }
+            } message: {
+                Text(eraseError ?? "Please try again.")
             }
             .navigationTitle(isSetup ? "Set up SalahSide" : "Settings")
             .navigationBarTitleDisplayMode(.inline)
@@ -222,6 +246,22 @@ struct FocusSettingsView: View {
             )
         }
         .tint(PrayerTheme.sage)
+        .sheet(item: $matCapture) { purpose in MatCaptureView(purpose: purpose, session: session) }
+        .confirmationDialog(
+            "Remove your registered mat?", isPresented: $isConfirmingMatRemoval, titleVisibility: .visible
+        ) {
+            Button("Remove mat", role: .destructive) {
+                do {
+                    try matStore.remove()
+                    matError = nil
+                } catch {
+                    matError = "Your registered mat could not be removed. Please try again."
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This deletes its saved comparison fingerprint and turns off photo unlock.")
+        }
     }
 
     private var selectedItemsLabel: String {

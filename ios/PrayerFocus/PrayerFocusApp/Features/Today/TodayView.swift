@@ -3,10 +3,12 @@ import SwiftUI
 struct TodayView: View {
     @Bindable var session: PrayerFocusSession
     @Environment(ScreenTimeService.self) private var screenTime
+    @Environment(RegisteredMatStore.self) private var matStore
     var showSettings: (() -> Void)?
 
     @State private var isShowingSettings = false
     @State private var isConfirmingUnlock = false
+    @State private var matCapture: MatCapturePurpose?
 
     var body: some View {
         GeometryReader { geometry in
@@ -68,6 +70,22 @@ struct TodayView: View {
                         }
 
                         if session.isPrayerTime && session.phase != .checkedIn && session.phase != .unlocked {
+                            if matStore.isEnabled, let id = matStore.registrationID,
+                                let fingerprint = matStore.featurePrint,
+                                let eventID = session.currentEventID, !session.hasScheduleError,
+                                !session.releasedEventIDs.contains(eventID)
+                            {
+                                Button {
+                                    matCapture = .unlock(
+                                        eventID: eventID, registrationID: id, featurePrint: fingerprint)
+                                } label: {
+                                    Label("Unlock with prayer mat", systemImage: "camera")
+                                }
+                                .font(.subheadline.weight(.medium))
+                                .foregroundStyle(PrayerTheme.sage)
+                                .frame(maxWidth: .infinity, minHeight: 44)
+                                .accessibilityIdentifier("today.matUnlock")
+                            }
                             Button("Unlock for this prayer") {
                                 isConfirmingUnlock = true
                             }
@@ -102,6 +120,7 @@ struct TodayView: View {
             FocusSettingsView(session: session)
                 .environment(screenTime)
         }
+        .sheet(item: $matCapture) { purpose in MatCaptureView(purpose: purpose, session: session) }
         .confirmationDialog(
             "Unlock selected apps for this prayer?",
             isPresented: $isConfirmingUnlock,
@@ -121,4 +140,7 @@ struct TodayView: View {
     TodayView(session: PrayerFocusSession())
         .environment(ScreenTimeService())
         .environment(FocusConfiguration())
+        .environment(MembershipStore())
+        .environment(
+            RegisteredMatStore(directory: FileManager.default.temporaryDirectory.appendingPathComponent("MatPreview")))
 }

@@ -262,24 +262,28 @@ struct MembershipPrivacyView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading, spacing: 20) {
-                Text("Your prayer check-ins are saved locally.")
-                    .font(.title2.weight(.semibold))
-                Text(
-                    "SalahSide does not require an account. Prayer check-ins and app selections are used on this device for the focus experience."
-                )
-                Text(
-                    "Settings, check-ins and opaque app-selection tokens are stored locally and may be included in your device backups. You can erase them in Settings. SalahSide does not upload them or use advertising trackers."
-                )
-                if let policyURL {
-                    Link("Read the full privacy policy", destination: policyURL)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Your prayer check-ins are saved locally.")
+                        .font(.title2.weight(.semibold))
+                    Text(
+                        "SalahSide does not require an account. Prayer check-ins and app selections are used on this device for the focus experience."
+                    )
+                    Text(
+                        "Settings, check-ins and opaque app-selection tokens are stored locally and may be included in your device backups. You can erase them in Settings. SalahSide does not upload them or use advertising trackers."
+                    )
+                    if let policyURL {
+                        Link("Read the full privacy policy", destination: policyURL)
+                    }
+                    Text("Apple processes subscription payments. SalahSide does not receive your payment card details.")
+                    Text(
+                        "Optional prayer mat unlock uses the camera and compares photos on this iPhone. SalahSide saves only a comparison fingerprint, not the photos, and never uploads either. Remove your mat or erase local data in Settings."
+                    )
                 }
-                Text("Apple processes subscription payments. SalahSide does not receive your payment card details.")
-                Spacer()
+                .padding(24)
             }
             .font(.body)
             .foregroundStyle(PrayerTheme.ink)
-            .padding(24)
             .background(PrayerTheme.canvas.ignoresSafeArea())
             .navigationTitle("Privacy")
             .navigationBarTitleDisplayMode(.inline)
@@ -298,4 +302,7 @@ struct MembershipPrivacyView: View {
         .environment(MembershipStore())
         .environment(FocusConfiguration())
         .environment(ScreenTimeService())
+        .environment(
+            RegisteredMatStore(
+                directory: FileManager.default.temporaryDirectory.appendingPathComponent("MatPaywallPreview")))
 }

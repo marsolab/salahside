@@ -31,6 +31,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Take a photo to register your prayer mat or compare it on this iPhone for an optional unlock.</string>
 	<key>SalahSidePrivacyPolicyURL</key>
 	<string>$(SALAH_SIDE_PRIVACY_POLICY_URL)</string>
 </dict>

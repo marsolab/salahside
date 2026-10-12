@@ -54,6 +54,7 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: Take a photo to register your prayer mat or compare it on this iPhone for an optional unlock.
         SalahSidePrivacyPolicyURL: $(SALAH_SIDE_PRIVACY_POLICY_URL)
         CFBundleURLTypes:
           - CFBundleURLName: com.marsolab.PrayerFocus.affirmations

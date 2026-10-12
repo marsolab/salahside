@@ -29,12 +29,14 @@
 		390A8A86E195AEBBD699F63B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2746B8C6D4FE64ECDA40260 /* Assets.xcassets */; };
 		3934A05D04294DBD6524125B /* FocusPolicyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F80C237A0C7DEF1D773335 /* FocusPolicyTests.swift */; };
 		3AF2684BE4F8B70F284E19AA /* FocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF75F5927D43BCA58E3A651 /* FocusState.swift */; };
+		3BB20612C0BAB53A3282138E /* MatSettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2137CA4F3ED06E6EE681249 /* MatSettingsSection.swift */; };
 		3C452C26EEFCF7ED72C2888A /* AffirmationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B08F706B5E81897B127E26 /* AffirmationDestination.swift */; };
 		3CAD7B42F5C76EF7D74F64EC /* PrayerFocusWidgetsTesting.storekit in Resources */ = {isa = PBXBuildFile; fileRef = E69A2A9BEEDCE80EEB661F06 /* PrayerFocusWidgetsTesting.storekit */; };
 		3EBA811E8C9ED0D23E214709 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97EF2037279FDBF697047B6D /* ManagedSettingsUI.framework */; };
 		41E309091817FA5C2D8733A1 /* WidgetMembership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3E29BFAD14554F7F80A12 /* WidgetMembership.swift */; };
 		44EB735B31691DC9BBCF55A3 /* WidgetMembership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3E29BFAD14554F7F80A12 /* WidgetMembership.swift */; };
 		4D93176E80FB5787532AFA70 /* PrayerHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00087EF3F8DEE7ECB240C45E /* PrayerHeroView.swift */; };
+		4FBC8D17F6033E055231267C /* MatImageMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4F2A1EABDC1BE8A962C0 /* MatImageMatcher.swift */; };
 		5025E80FC22C4EBC5D700B2F /* FocusStateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF83B43C16FB08BAAF0ED0 /* FocusStateStore.swift */; };
 		52254A9BA4FA3E2ABE7FEAD7 /* FocusConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCF2C6FFC92DB30EE44F27 /* FocusConfiguration.swift */; };
 		55F528B11569B0664BC34ADC /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD25194F9A5A4249D3627FF4 /* FamilyControls.framework */; };
@@ -53,6 +55,7 @@
 		7265B38E0914166BF231D530 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F7FCE3EFF58E46AC73042 /* Prayer.swift */; };
 		739ABDDB50229444ED692B84 /* FocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF75F5927D43BCA58E3A651 /* FocusState.swift */; };
 		73C61D9AB25F49444BE5478E /* Adhan in Frameworks */ = {isa = PBXBuildFile; productRef = C5544A802240D76CC9533845 /* Adhan */; };
+		73DCD1ACB7D90A07D1942DB7 /* MatCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FDF39413AB7143C5B63985 /* MatCaptureView.swift */; };
 		76CC62E545C51571B8C04AE0 /* FamilyControls.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD25194F9A5A4249D3627FF4 /* FamilyControls.framework */; };
 		78EF21D975A6095756EE3BDD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C32CB219DDF11F46C6333BD9 /* PrivacyInfo.xcprivacy */; };
 		7BD2C72E59854D3F5B0D6FE3 /* DailyAffirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF01AA293E3509470599AD6F /* DailyAffirmation.swift */; };
@@ -61,6 +64,7 @@
 		8A1729A17C3C00C90CF4E672 /* MembershipPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736001BEA8E857987B6833B /* MembershipPlan.swift */; };
 		90C701D7EED05819D6437263 /* PrayerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CE11DD1183605D71C7DEF4 /* PrayerNotificationService.swift */; };
 		9143DDDA04D50CC1E165F718 /* PrayerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A00E09DC2B59AFD258C2CA7 /* PrayerTheme.swift */; };
+		9281A54AC2279E90FC997F4A /* RegisteredMatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8E5299296C36F970658DF /* RegisteredMatTests.swift */; };
 		943A48F5D373A523A4C20803 /* PrayerFocusShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CE43EB385184FD0189CFB /* PrayerFocusShield.swift */; };
 		95E392A42BD4364112E5A028 /* PrayerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A00E09DC2B59AFD258C2CA7 /* PrayerTheme.swift */; };
 		9A3F4A56F780A586E47B1700 /* PrayerFocusShieldAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9797F9A638463CE7A847E31 /* PrayerFocusShieldAction.swift */; };
@@ -70,6 +74,7 @@
 		A12035C3B08CEA6856595C1A /* AffirmationWidgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08458FC05021A85AA18DACC2 /* AffirmationWidgetCard.swift */; };
 		A4382AE70D15EEA4D86FD644 /* FocusPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4837D13A2C21C50F4C2B8 /* FocusPolicy.swift */; };
 		A56F9327FDFFB8AAEECEA35D /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1743FFF7AC24EB93CA081F /* ManagedSettings.framework */; };
+		AA2494CF6A8F5FDD3AFB87D6 /* RegisteredMatStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6482A14B44F19B7F3E87BACC /* RegisteredMatStore.swift */; };
 		AC229C006E4FA1232C66FBB5 /* FocusPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4837D13A2C21C50F4C2B8 /* FocusPolicy.swift */; };
 		B1DA843FD7E403B4A03ABF16 /* FocusWindowPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1FBD70ACBCE71211545B00 /* FocusWindowPlanning.swift */; };
 		BBF518CECD4A370E6D19FB77 /* PrayerFocusSetupUITestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D781E7D01B576044252860E /* PrayerFocusSetupUITestSupport.swift */; };
@@ -92,6 +97,7 @@
 		E4F196B083767BAA22062616 /* DailyAffirmationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4684B1028C0AE0C18F9ABC /* DailyAffirmationTests.swift */; };
 		E603F0D534BC673E043B92DD /* DailyAffirmationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A6121414E10FCE9915166E /* DailyAffirmationWidget.swift */; };
 		E64283D670DEF6E18650A1F8 /* WidgetMembership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B3E29BFAD14554F7F80A12 /* WidgetMembership.swift */; };
+		F054A5DC71861AE65DE28D5D /* MatCameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FAD9FAD4E0AB726B23DAD0 /* MatCameraPicker.swift */; };
 		F2F4213B2919E536760AF82A /* PrayerFocus.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 8339025B8310E68C1B2D292F /* PrayerFocus.storekit */; };
 		F69B911EC520AA96670623E2 /* AffirmationMembershipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1FC4836352432F803B001 /* AffirmationMembershipTests.swift */; };
 		F9EC758A6E278FF5913AE110 /* DailyAffirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF01AA293E3509470599AD6F /* DailyAffirmation.swift */; };
@@ -177,6 +183,7 @@
 		2390D47288A88D0435C9804E /* PrayerFocusShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerFocusShield.entitlements; sourceTree = "<group>"; };
 		255D973F557A2A26333DDC47 /* PrayerFocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerFocusApp.swift; sourceTree = "<group>"; };
 		2728ACE7403628FC801E63C8 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		28FDF39413AB7143C5B63985 /* MatCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatCaptureView.swift; sourceTree = "<group>"; };
 		2B008858F7E963B84D349F9A /* DailyAffirmationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmationUITests.swift; sourceTree = "<group>"; };
 		2F3F7FCE3EFF58E46AC73042 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		3302AA887BC4E0E9F541084B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +203,7 @@
 		6134154E03B4AA7CFB5F7985 /* MembershipPaywallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipPaywallUITests.swift; sourceTree = "<group>"; };
 		615EF22F7FD9BBF57153DF30 /* ScreenTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeService.swift; sourceTree = "<group>"; };
 		646E04A1142A875CE5416A37 /* AffirmationMembershipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffirmationMembershipUITests.swift; sourceTree = "<group>"; };
+		6482A14B44F19B7F3E87BACC /* RegisteredMatStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredMatStore.swift; sourceTree = "<group>"; };
 		648B2E2F2FA7580943EDC94F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6A00E09DC2B59AFD258C2CA7 /* PrayerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTheme.swift; sourceTree = "<group>"; };
 		75B3E29BFAD14554F7F80A12 /* WidgetMembership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetMembership.swift; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 		78FD860C59E09C6DB731D738 /* PrayerFocusShieldAction.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PrayerFocusShieldAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F539B8DCB361F182E11D5A /* PrayerFocusSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerFocusSession.swift; sourceTree = "<group>"; };
 		7CEE90F507A5F41DE5B2449E /* Adhan */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Adhan; path = Vendor/Adhan; sourceTree = SOURCE_ROOT; };
+		80FAD9FAD4E0AB726B23DAD0 /* MatCameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatCameraPicker.swift; sourceTree = "<group>"; };
 		81BC31758912697D31D81F23 /* PrayerFocusShieldAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerFocusShieldAction.entitlements; sourceTree = "<group>"; };
 		8339025B8310E68C1B2D292F /* PrayerFocus.storekit */ = {isa = PBXFileReference; path = PrayerFocus.storekit; sourceTree = "<group>"; };
 		8A34F7105CD2D275F1FA8BD0 /* PrayerFocusMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerFocusMonitor.entitlements; sourceTree = "<group>"; };
@@ -218,7 +227,9 @@
 		A9797F9A638463CE7A847E31 /* PrayerFocusShieldAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerFocusShieldAction.swift; sourceTree = "<group>"; };
 		AD5DF40FDDC56E559B88CE6E /* PrayerFocus.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PrayerFocus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFAFE0C6B87D2A1E67DD9A33 /* PrayerFocus.xctestplan */ = {isa = PBXFileReference; path = PrayerFocus.xctestplan; sourceTree = "<group>"; };
+		B21D4F2A1EABDC1BE8A962C0 /* MatImageMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatImageMatcher.swift; sourceTree = "<group>"; };
 		B8AF83B43C16FB08BAAF0ED0 /* FocusStateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateStore.swift; sourceTree = "<group>"; };
+		B9D8E5299296C36F970658DF /* RegisteredMatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredMatTests.swift; sourceTree = "<group>"; };
 		C32CB219DDF11F46C6333BD9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C4F80C237A0C7DEF1D773335 /* FocusPolicyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusPolicyTests.swift; sourceTree = "<group>"; };
 		C5CCF2C6FFC92DB30EE44F27 /* FocusConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusConfiguration.swift; sourceTree = "<group>"; };
@@ -229,6 +240,7 @@
 		DDF75F5927D43BCA58E3A651 /* FocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusState.swift; sourceTree = "<group>"; };
 		DF01AA293E3509470599AD6F /* DailyAffirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmation.swift; sourceTree = "<group>"; };
 		E1721308FD229E3CBF79350C /* MembershipGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipGateView.swift; sourceTree = "<group>"; };
+		E2137CA4F3ED06E6EE681249 /* MatSettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatSettingsSection.swift; sourceTree = "<group>"; };
 		E2746B8C6D4FE64ECDA40260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5E4837D13A2C21C50F4C2B8 /* FocusPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusPolicy.swift; sourceTree = "<group>"; };
 		E69A2A9BEEDCE80EEB661F06 /* PrayerFocusWidgetsTesting.storekit */ = {isa = PBXFileReference; path = PrayerFocusWidgetsTesting.storekit; sourceTree = "<group>"; };
@@ -309,6 +321,7 @@
 				15531635A97F6031ED7F67AF /* MembershipStoreTests.swift */,
 				FED9CA6368BC1E6366926987 /* PrayerFocusSessionTests.swift */,
 				F74D1A7DC5CCE51F613912EE /* PrayerScheduleTests.swift */,
+				B9D8E5299296C36F970658DF /* RegisteredMatTests.swift */,
 			);
 			path = PrayerFocusTests;
 			sourceTree = "<group>";
@@ -332,6 +345,16 @@
 				97EF2037279FDBF697047B6D /* ManagedSettingsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37E75173EF864338A3A7608D /* MatUnlock */ = {
+			isa = PBXGroup;
+			children = (
+				80FAD9FAD4E0AB726B23DAD0 /* MatCameraPicker.swift */,
+				28FDF39413AB7143C5B63985 /* MatCaptureView.swift */,
+				E2137CA4F3ED06E6EE681249 /* MatSettingsSection.swift */,
+			);
+			path = MatUnlock;
 			sourceTree = "<group>";
 		};
 		406229AF03DEB7BC3CAEFB5F /* Settings */ = {
@@ -366,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				CAF0BD52E5DE2B776821204A /* Affirmations */,
+				37E75173EF864338A3A7608D /* MatUnlock */,
 				00E3250DDD61C1E52DEF780A /* Membership */,
 				406229AF03DEB7BC3CAEFB5F /* Settings */,
 				473A16015D71B5DBD177FEA8 /* Today */,
@@ -406,8 +430,10 @@
 		87E424EBA1A0DEE433E170E7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B21D4F2A1EABDC1BE8A962C0 /* MatImageMatcher.swift */,
 				3F132C7B14F61643EC0DCFC8 /* MembershipStore.swift */,
 				34CE11DD1183605D71C7DEF4 /* PrayerNotificationService.swift */,
+				6482A14B44F19B7F3E87BACC /* RegisteredMatStore.swift */,
 				615EF22F7FD9BBF57153DF30 /* ScreenTimeService.swift */,
 			);
 			path = Services;
@@ -856,6 +882,10 @@
 				3AF2684BE4F8B70F284E19AA /* FocusState.swift in Sources */,
 				6E8C5C3E50BC05EA017A7A76 /* FocusStateStore.swift in Sources */,
 				B1DA843FD7E403B4A03ABF16 /* FocusWindowPlanning.swift in Sources */,
+				F054A5DC71861AE65DE28D5D /* MatCameraPicker.swift in Sources */,
+				73DCD1ACB7D90A07D1942DB7 /* MatCaptureView.swift in Sources */,
+				4FBC8D17F6033E055231267C /* MatImageMatcher.swift in Sources */,
+				3BB20612C0BAB53A3282138E /* MatSettingsSection.swift in Sources */,
 				260FD7864B3D45643510AEDE /* MembershipGateView.swift in Sources */,
 				5EA4B08A4B9D6048B349DF86 /* MembershipPaywallView.swift in Sources */,
 				8A1729A17C3C00C90CF4E672 /* MembershipPlan.swift in Sources */,
@@ -868,6 +898,7 @@
 				0D4CD235BB417E5FC28F496F /* PrayerSchedule.swift in Sources */,
 				26E4170D4EF53BB52D1BD8D7 /* PrayerScheduleView.swift in Sources */,
 				9143DDDA04D50CC1E165F718 /* PrayerTheme.swift in Sources */,
+				AA2494CF6A8F5FDD3AFB87D6 /* RegisteredMatStore.swift in Sources */,
 				DFB2833C77D6DB87C1BE2D01 /* ScreenTimeService.swift in Sources */,
 				D90FC695FDF7C5D509084A0E /* TodayView.swift in Sources */,
 				44EB735B31691DC9BBCF55A3 /* WidgetMembership.swift in Sources */,
@@ -896,6 +927,7 @@
 				063504D1654864CAD4F048C6 /* MembershipStoreTests.swift in Sources */,
 				5C2BE81E7F6DC3F9B0DA7228 /* PrayerFocusSessionTests.swift in Sources */,
 				A068D41578A8F0A2203DBF02 /* PrayerScheduleTests.swift in Sources */,
+				9281A54AC2279E90FC997F4A /* RegisteredMatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

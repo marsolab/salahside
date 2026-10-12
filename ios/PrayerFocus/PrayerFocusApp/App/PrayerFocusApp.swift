@@ -7,6 +7,7 @@ struct PrayerFocusApp: App {
     @State private var session: PrayerFocusSession
     @State private var screenTime: ScreenTimeService
     @State private var configuration: FocusConfiguration
+    @State private var matStore: RegisteredMatStore
     @State private var membership = MembershipStore()
     @State private var affirmationDestination = AffirmationDestination()
     private let notifications = PrayerNotificationService()
@@ -28,6 +29,19 @@ struct PrayerFocusApp: App {
             defaults = .standard
         #endif
         _configuration = State(initialValue: FocusConfiguration(defaults: defaults))
+        #if DEBUG
+            if ProcessInfo.processInfo.arguments.contains("-ui-testing") {
+                let store = RegisteredMatStore(
+                    directory: FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+                        .appendingPathComponent("RegisteredMatUITests", isDirectory: true))
+                if ProcessInfo.processInfo.arguments.contains("-reset-setup") { try? store.remove() }
+                _matStore = State(initialValue: store)
+            } else {
+                _matStore = State(initialValue: RegisteredMatStore())
+            }
+        #else
+            _matStore = State(initialValue: RegisteredMatStore())
+        #endif
         let session = PrayerFocusSession(defaults: defaults)
         session.onRelease = { FocusRuntime().release(eventID: $0) }
         _session = State(initialValue: session)
@@ -55,6 +69,7 @@ struct PrayerFocusApp: App {
             .environment(screenTime)
             .environment(membership)
             .environment(configuration)
+            .environment(matStore)
             .environment(affirmationDestination)
             .preferredColorScheme(.light)
             .onOpenURL { url in
