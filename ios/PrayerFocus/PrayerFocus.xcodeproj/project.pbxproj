@@ -46,6 +46,7 @@
 		5EA4B08A4B9D6048B349DF86 /* MembershipPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891F4A8044172A5AEB4D489 /* MembershipPaywallView.swift */; };
 		60D9EC938B5407BDC3994C38 /* MembershipRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FDC88BEF60B4CF69A8244E /* MembershipRefreshTests.swift */; };
 		60E8A14C88CE8CE5FA35C152 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3F7FCE3EFF58E46AC73042 /* Prayer.swift */; };
+		66FBF62DD78B36CE957BB16A /* MatImageMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A763AAF765F6012C3CEC0 /* MatImageMatcherTests.swift */; };
 		69944BBC829A97D3B8C49BAF /* PrayerSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648C42E1B0D33A5FBD73456 /* PrayerSchedule.swift */; };
 		69FC14DE268FB8728977C63F /* FocusSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D468E2CD6DA747116120223 /* FocusSettingsView.swift */; };
 		6B242A401284C88555E0A120 /* PrayerFocusMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A67950FE86290E17A12107B5 /* PrayerFocusMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -62,6 +63,7 @@
 		7CB947F148C8F9C126484A3A /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1743FFF7AC24EB93CA081F /* ManagedSettings.framework */; };
 		8576206C15651651E90595C4 /* FocusPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E4837D13A2C21C50F4C2B8 /* FocusPolicy.swift */; };
 		8A1729A17C3C00C90CF4E672 /* MembershipPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7736001BEA8E857987B6833B /* MembershipPlan.swift */; };
+		8E366F0D27AFAC05C4204090 /* MatImageMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4A763AAF765F6012C3CEC0 /* MatImageMatcherTests.swift */; };
 		90C701D7EED05819D6437263 /* PrayerNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CE11DD1183605D71C7DEF4 /* PrayerNotificationService.swift */; };
 		9143DDDA04D50CC1E165F718 /* PrayerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A00E09DC2B59AFD258C2CA7 /* PrayerTheme.swift */; };
 		9281A54AC2279E90FC997F4A /* RegisteredMatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8E5299296C36F970658DF /* RegisteredMatTests.swift */; };
@@ -82,6 +84,7 @@
 		C0EE5ECD70FA388BBD7B56DF /* AffirmationWidgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08458FC05021A85AA18DACC2 /* AffirmationWidgetCard.swift */; };
 		C355A7A8B80BBD68B28C378D /* PrayerFocusShieldAction.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 78FD860C59E09C6DB731D738 /* PrayerFocusShieldAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C378DDA371BC451D4F600CF9 /* PrayerFocusWidgetsTesting.storekit in Resources */ = {isa = PBXBuildFile; fileRef = E69A2A9BEEDCE80EEB661F06 /* PrayerFocusWidgetsTesting.storekit */; };
+		C3A0D86D01EF81640CB6B986 /* MatImageMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D4F2A1EABDC1BE8A962C0 /* MatImageMatcher.swift */; };
 		C9AF94B4EB2340A2EECA7BB5 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1743FFF7AC24EB93CA081F /* ManagedSettings.framework */; };
 		CABFC1EC5A109FB7481FCAB0 /* AffirmationTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CB18B7596DEF08620A736 /* AffirmationTimeline.swift */; };
 		CCB9906A4FF6F31C5A8BDBDA /* PrayerFocusMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBF8D90D630E2DF7B3D899 /* PrayerFocusMonitor.swift */; };
@@ -185,6 +188,7 @@
 		2728ACE7403628FC801E63C8 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		28FDF39413AB7143C5B63985 /* MatCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatCaptureView.swift; sourceTree = "<group>"; };
 		2B008858F7E963B84D349F9A /* DailyAffirmationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAffirmationUITests.swift; sourceTree = "<group>"; };
+		2C4A763AAF765F6012C3CEC0 /* MatImageMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatImageMatcherTests.swift; sourceTree = "<group>"; };
 		2F3F7FCE3EFF58E46AC73042 /* Prayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer.swift; sourceTree = "<group>"; };
 		3302AA887BC4E0E9F541084B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		34CE11DD1183605D71C7DEF4 /* PrayerNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerNotificationService.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 		97EF2037279FDBF697047B6D /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = System/Library/Frameworks/ManagedSettingsUI.framework; sourceTree = SDKROOT; };
 		9BA82ACEACA7E6EA95FBDB26 /* PrayerFocus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerFocus.entitlements; sourceTree = "<group>"; };
 		9D781E7D01B576044252860E /* PrayerFocusSetupUITestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerFocusSetupUITestSupport.swift; sourceTree = "<group>"; };
+		A3F043D0CA8B069D079673A9 /* PrayerFocusVisionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerFocusVisionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57D97AA5CF4071DBE0EB55F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A67950FE86290E17A12107B5 /* PrayerFocusMonitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PrayerFocusMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75E346F3F0C22B21D73DD6F /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
@@ -482,6 +487,7 @@
 				78FD860C59E09C6DB731D738 /* PrayerFocusShieldAction.appex */,
 				528A3A184DFEB5083F3CEEF6 /* PrayerFocusTests.xctest */,
 				1260EEE8FFE4139AF8976433 /* PrayerFocusUITests.xctest */,
+				A3F043D0CA8B069D079673A9 /* PrayerFocusVisionTests.xctest */,
 				D85B373692CB97ED11C93AF6 /* PrayerFocusWidgets.appex */,
 			);
 			name = Products;
@@ -573,9 +579,18 @@
 				7D922E80433D7D7B8DF5FA5F /* PrayerFocusUITests */,
 				2106C93DA64841FB20126FF0 /* PrayerFocusWidgets */,
 				E9E6A682D70584BEB216FE90 /* Shared */,
+				F5F48B4EA51CF57A459B5376 /* TestSupport */,
 				36B6F8BCCD38266F44E1DA73 /* Frameworks */,
 				A435D996874C55455C30E313 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		F5F48B4EA51CF57A459B5376 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				2C4A763AAF765F6012C3CEC0 /* MatImageMatcherTests.swift */,
+			);
+			path = TestSupport;
 			sourceTree = "<group>";
 		};
 		FA209478C9B4CF9DFF6D2414 /* Domain */ = {
@@ -628,6 +643,23 @@
 			productName = PrayerFocusShield;
 			productReference = 1B76B594DC21D0EA39F7EF6F /* PrayerFocusShield.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		1D120634F050305F715D1CA6 /* PrayerFocusVisionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE111FD989238701F8AA8133 /* Build configuration list for PBXNativeTarget "PrayerFocusVisionTests" */;
+			buildPhases = (
+				D5D569E039833668A6A74E68 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrayerFocusVisionTests;
+			packageProductDependencies = (
+			);
+			productName = PrayerFocusVisionTests;
+			productReference = A3F043D0CA8B069D079673A9 /* PrayerFocusVisionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C6D440D902C078F100046FCB /* PrayerFocus */ = {
 			isa = PBXNativeTarget;
@@ -768,6 +800,7 @@
 				14EE25F31DEB36004972410E /* PrayerFocusShield */,
 				CC4DE5E4AFFAC32AD9F4C6D5 /* PrayerFocusShieldAction */,
 				E025E757B37029EEE3AB8939 /* PrayerFocusTests */,
+				1D120634F050305F715D1CA6 /* PrayerFocusVisionTests */,
 				DBC43C19D4E7C6BAF0A486C3 /* PrayerFocusUITests */,
 			);
 		};
@@ -923,6 +956,7 @@
 				E4F196B083767BAA22062616 /* DailyAffirmationTests.swift in Sources */,
 				22BC6E71C4F40A93F9BD52A0 /* FocusConfigurationTests.swift in Sources */,
 				3934A05D04294DBD6524125B /* FocusPolicyTests.swift in Sources */,
+				66FBF62DD78B36CE957BB16A /* MatImageMatcherTests.swift in Sources */,
 				60D9EC938B5407BDC3994C38 /* MembershipRefreshTests.swift in Sources */,
 				063504D1654864CAD4F048C6 /* MembershipStoreTests.swift in Sources */,
 				5C2BE81E7F6DC3F9B0DA7228 /* PrayerFocusSessionTests.swift in Sources */,
@@ -953,6 +987,15 @@
 				9B27C388978AB9FB0221AF54 /* Prayer.swift in Sources */,
 				943A48F5D373A523A4C20803 /* PrayerFocusShield.swift in Sources */,
 				E64283D670DEF6E18650A1F8 /* WidgetMembership.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D569E039833668A6A74E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A0D86D01EF81640CB6B986 /* MatImageMatcher.swift in Sources */,
+				8E366F0D27AFAC05C4204090 /* MatImageMatcherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1103,12 +1146,28 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
+		};
+		2EDB5128BD9B0F0D93239E8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marsolab.PrayerFocusVisionTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
 		};
 		387F44D2D422F68DC42334E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1178,7 +1237,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
@@ -1299,6 +1357,23 @@
 				TEST_TARGET_NAME = PrayerFocus;
 			};
 			name = Release;
+		};
+		C1B3724BDD07081C2ABFC25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marsolab.PrayerFocusVisionTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
 		};
 		C2C37553E374C05CE9192EBC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1442,6 +1517,15 @@
 			buildConfigurations = (
 				016A789743B3D0517B276D71 /* Debug */,
 				0804089E1379E53B217BCE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FE111FD989238701F8AA8133 /* Build configuration list for PBXNativeTarget "PrayerFocusVisionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B3724BDD07081C2ABFC25D /* Debug */,
+				2EDB5128BD9B0F0D93239E8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

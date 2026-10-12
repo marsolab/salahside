@@ -45,8 +45,10 @@ cd ios/PrayerFocus
 xcodegen generate
 xcrun swift-format lint --strict --recursive --configuration .swift-format \
   PrayerFocusApp Shared PrayerFocusWidgets PrayerFocusMonitor PrayerFocusShield \
-  PrayerFocusShieldAction PrayerFocusTests PrayerFocusUITests
+  PrayerFocusShieldAction PrayerFocusTests PrayerFocusUITests TestSupport
 swift test --package-path Vendor/Adhan
+xcodebuild -project PrayerFocus.xcodeproj -scheme PrayerFocusVision \
+  -destination 'platform=macOS,arch=arm64' CODE_SIGNING_ALLOWED=NO test
 SALAH_SIM_ID=$(python3 scripts/select_simulator.py)
 xcodebuild -project PrayerFocus.xcodeproj -scheme PrayerFocus \
   -testPlan PrayerFocusWidgets -only-testing:PrayerFocusTests \
@@ -74,6 +76,6 @@ python3 scripts/release_preflight.py \
 
 ## Remaining release gates
 
-Registered-mat matching uses Vision feature-print revision 2 and an experimental maximum distance of 0.35. Synthetic image tests verify comparison wiring; they do not establish real-mat recognition accuracy or resistance to photographing a screen/printout. Calibrate and record same-mat versus different-mat results on real iPhones across framing, angles, patterned/plain mats and lighting before making accuracy claims. Simulator builds select supported CPU compute devices for Vision; physical devices use Vision's default compute selection. Image comparison currently fails on iOS 26.5/27 simulators because different synthetic images produce nearly identical prints, while native macOS Vision distinguishes the same JPEG bytes. The test remains enabled; iPhone matching validation is still required. Mat profile backup exclusion is guidance to iOS, not an absolute guarantee.
+Registered-mat matching uses Vision feature-print revision 2 and an experimental maximum distance of 0.35. Synthetic image tests verify comparison wiring; they do not establish real-mat recognition accuracy or resistance to photographing a screen/printout. Calibrate and record same-mat versus different-mat results on real iPhones across framing, angles, patterned/plain mats and lighting before making accuracy claims. Simulator builds select supported CPU compute devices for Vision; physical devices use Vision's default compute selection. Vision can produce nearly identical prints for different images on iOS 26.5/27 simulators because of unsupported pixel-format rendering. CI therefore runs the comparison assertions against the production matcher in the required native macOS `PrayerFocusVision` scheme. The shared comparison test explicitly skips simulator execution and retains its assertions on physical iPhones. Storage, release guards and camera UI tests still run on the simulator; native macOS comparison does not establish iPhone matching accuracy. Mat profile backup exclusion is guidance to iOS, not an absolute guarantee.
 
 Physical iPhone Screen Time behavior is **not validated**. Device Activity callbacks depend on device activity and are not exact wall-clock alarms. Monitor intervals shorter than Apple's 15-minute minimum are not registered. Qualified timetable review, actual notification delivery, sandbox subscription billing, real App Group sharing, distribution capability approval and accessibility/device acceptance all remain gates. Do not upload or describe this build as release-ready until those checks are recorded.

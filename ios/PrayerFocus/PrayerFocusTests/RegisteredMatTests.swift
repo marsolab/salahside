@@ -1,5 +1,4 @@
 import UIKit
-import Vision
 import XCTest
 
 @testable import PrayerFocus
@@ -78,38 +77,6 @@ final class RegisteredMatTests: XCTestCase {
             XCTFail("Malformed reference was accepted")
         } catch {}
         XCTAssertThrowsError(try RegisteredMatStore(directory: directory).register(featurePrint: Data([1])))
-    }
-
-    func testVisionMatchesSameImageAndRejectsUnrelatedSyntheticScene() async throws {
-        let matcher = MatImageMatcher()
-        let image = imageData(patterned: true)
-        let reference = try await matcher.featurePrint(for: image)
-        let same = try await matcher.matches(image: image, reference: reference)
-        let otherImage = imageData(patterned: false)
-        for (name, data) in [("Synthetic pattern", image), ("Synthetic circle", otherImage)] {
-            let attachment = XCTAttachment(data: data, uniformTypeIdentifier: "public.jpeg")
-            attachment.name = name
-            attachment.lifetime = .keepAlways
-            add(attachment)
-        }
-        XCTAssertNotEqual(image, otherImage)
-        let other = try await matcher.matches(image: otherImage, reference: reference)
-        let otherPrint = try await matcher.featurePrint(for: otherImage)
-        let original = try XCTUnwrap(
-            NSKeyedUnarchiver.unarchivedObject(ofClass: VNFeaturePrintObservation.self, from: reference))
-        let different = try XCTUnwrap(
-            NSKeyedUnarchiver.unarchivedObject(ofClass: VNFeaturePrintObservation.self, from: otherPrint))
-        var distance: Float = 0
-        try original.computeDistance(&distance, to: different)
-        let normA = original.data.withUnsafeBytes { bytes in
-            bytes.bindMemory(to: Float.self).reduce(0.0) { $0 + Double($1 * $1) }.squareRoot()
-        }
-        let normB = different.data.withUnsafeBytes { bytes in
-            bytes.bindMemory(to: Float.self).reduce(0.0) { $0 + Double($1 * $1) }.squareRoot()
-        }
-        XCTAssertNotEqual(original.data, different.data, "Different scenes must have distinct fingerprints")
-        XCTAssertTrue(same)
-        XCTAssertFalse(other, "Different-scene distance: \(distance); norms: \(normA), \(normB)")
     }
 
     func testMatchedMatReleasesOnlyCapturedPrayerWithoutCompletion() throws {

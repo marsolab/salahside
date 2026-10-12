@@ -53,3 +53,9 @@ The 0.35 threshold remains experimental. Physical iPhone camera permissions/capt
 ## PR verification, 2026-10-12
 
 Fresh strict Swift formatting, vendored Adhan calculation tests, frontend checks/tests (3 passed), privacy-page formatting and an unsigned generic Release simulator build passed. App-test rerun was attempted but blocked because this machine now has no installed simulator runtimes or available simulators. The 2026-10-11 broad result remains 35 passed / 1 failed; it is not a fresh passing app-suite result. Open as a draft with simulator comparison and physical-device calibration unresolved.
+
+## CI repair, 2026-10-12
+
+The remote native job confirmed the unrelated-image failure with identical Vision vectors and unsupported RGBA pixel-buffer rendering; the other four PR checks passed. The comparison test was moved to shared `TestSupport/MatImageMatcherTests.swift`, compiled both into the iOS test target and a host-only macOS `PrayerFocusVisionTests` target using the production matcher source. CI now requires the native macOS comparison step before its existing simulator suites. Only the unsupported simulator comparison is explicitly skipped; the same assertions remain active on native macOS and physical iPhones. The matcher, threshold and app behavior were not changed. Device calibration remains pending.
+
+Local repair validation passed: required macOS Vision XCTest (1 test, zero failures), strict Swift formatting including TestSupport, generated Xcode project and unsigned generic iOS simulator build-for-testing for both simulator architectures. The local machine still has no simulator runtime, so actual simulator execution is verified through remote CI.
